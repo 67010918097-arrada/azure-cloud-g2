@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="th" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Azure Cloud | G2 Cloud Computing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<div id="bar" aria-hidden="true"></div>
+<header class="nav"><a class="logo" href="#home">Azure Cloud</a>
+<button id="burger" aria-label="เปิดเมนู" aria-expanded="false">Menu</button>
+<nav id="menu" aria-label="หลัก"><a href="#home">Home</a><a href="#azure">Azure</a><a href="#services">Services</a><a href="#infra">Infrastructure</a><a href="#pricing">Pricing</a><a href="#proscons">Pros &amp; Cons</a><a href="#cert">Certification</a><a href="#refs">References</a></nav>
+<button id="theme" aria-label="สลับธีม">Light</button></header>
+<main>
+<section id="home" class="hero"><svg class="net" viewBox="0 0 800 400" aria-hidden="true"><g class="ln"><path d="M50 300L220 180L400 240L580 120L760 200"/><path d="M220 180L300 60L580 120"/><path d="M400 240L480 340L700 320"/></g><g class="nd"><circle cx="50" cy="300" r="6"/><circle cx="220" cy="180" r="8"/><circle cx="400" cy="240" r="8"/><circle cx="580" cy="120" r="10"/><circle cx="760" cy="200" r="6"/><circle cx="300" cy="60" r="6"/><circle cx="480" cy="340" r="6"/><circle cx="700" cy="320" r="6"/></g></svg>
+<div class="wrap"><p class="tag">G2 : Azure Cloud</p><h1>Azure Cloud</h1><p class="sub">The Cloud Platform for the Digital Era</p>
+<button class="btn" data-go="#azure">Explore Azure</button>
+<ul class="members"><li>67010918023 นางสาวกานดา ราชคมน์</li><li>67010918097 นางสาวอารดา งามดี</li><li>67010918060 นางสาวอธิชา ยะรี</li><li>66010916006 นางสาวอนัญญารัตน์ ตุปะโส</li><li>67010918034 นางสาวนารีรัตน์ จักทอน</li></ul></div></section>
+
+<section id="azure" class="wrap"><h2>Azure คืออะไร</h2>
+<p class="lead">Microsoft Azure คือแพลตฟอร์มคลาวด์ของ Microsoft ที่ให้เช่าทรัพยากรไอที เช่น เซิร์ฟเวอร์ ฐานข้อมูล เครือข่าย และ AI ผ่านอินเทอร์เน็ต แทนการซื้อและดูแลฮาร์ดแวร์เอง</p>
+<div class="grid3"><article class="card"><h3>Cloud Computing</h3><p>การใช้ทรัพยากรคอมพิวเตอร์ตามต้องการผ่านเครือข่าย จ่ายตามการใช้งาน</p></article><article class="card"><h3>บทบาทของ Azure</h3><p>เป็น Public Cloud ที่ให้บริการแบบ IaaS, PaaS และ Serverless รวมถึงเครื่องมือด้านข้อมูลและ AI</p></article><article class="card"><h3>ใครใช้ได้</h3><p>นักพัฒนา องค์กร หน่วยงานรัฐ และนักศึกษา ตั้งแต่เว็บแอปขนาดเล็กถึงระบบองค์กร</p></article></div></section>
+
+<section id="services" class="wrap"><h2>2.1 Azure Services</h2><p class="lead">แตะการ์ดเพื่อดูรายละเอียด แต่ละบริการระบุ Azure Product ที่ใช้เป็นตัวอย่าง</p><div id="cards" class="grid3"></div>
+<h3 class="h3">Service Comparison</h3><div id="tabs" role="tablist" class="tabs"></div><div id="cmp" class="card" aria-live="polite"></div></section>
+
+<section id="infra" class="wrap"><h2>2.2 Data Center Location</h2>
+<p class="lead">Region คือกลุ่ม Data Center ในพื้นที่หนึ่ง Availability Zone คือตำแหน่งแยกทางกายภาพภายใน Region เพื่อความทนทาน บาง Region มี Region Pair สำหรับ Disaster Recovery</p>
+<div class="map"><svg id="world" viewBox="0 0 360 180" role="img" aria-label="แผนที่ Azure Region"></svg></div><div id="pin" class="card" aria-live="polite">แตะหมุดบนแผนที่เพื่อดูข้อมูล Region</div>
+<p class="note">ตรวจสอบ ณ ปี 2026: Microsoft ประกาศแผนสร้าง Azure Region ในประเทศไทย (ลงทุนกว่า 1 พันล้านดอลลาร์สหรัฐ ช่วง 2026–2028) แต่ยังเป็นแผน ไม่ใช่ Region ที่เปิดให้บริการ</p></section>
+
+<section id="pricing" class="wrap"><h2>2.3 Pricing Model</h2><div id="ptabs" class="tabs"></div><div id="pbox" class="card" aria-live="polite"></div>
+<ol class="flow"><li>Usage</li><li>Resource</li><li>Billing</li><li>Cost Management</li></ol><p class="note">ไม่ระบุราคาโดยประมาณ ราคาจริงขึ้นกับ Region สกุลเงิน และ Resource ดูที่ Azure Pricing Calculator</p></section>
+
+<section id="proscons" class="wrap"><h2>2.4 Strengths &amp; Considerations</h2><div class="grid2"><div class="card"><h3>Strengths</h3><ul><li>โครงสร้างพื้นฐานระดับโลกที่มี Region จำนวนมาก</li><li>พอร์ตโฟลิโอบริการกว้าง ตั้งแต่ IaaS ถึง AI</li><li>เชื่อมต่อกับระบบองค์กร Microsoft และ Entra ID</li><li>มีเครื่องมือด้านความปลอดภัยและนักพัฒนา</li></ul></div><div class="card"><h3>Considerations</h3><ul><li>โครงสร้างราคาซับซ้อน ต้องวางแผนและติดตามค่าใช้จ่าย</li><li>มี Learning Curve จากจำนวนบริการ</li><li>ควรพิจารณาความเสี่ยง Vendor Lock-in</li><li>บริการบางรายการไม่มีในทุก Region</li></ul></div></div></section>
+
+<section id="cert" class="wrap"><h2>2.5 Certification Path</h2><p class="lead">แตะใบรับรองเพื่อดูรายละเอียด ตรวจสอบรายการล่าสุดที่ Microsoft Learn ก่อนลงสอบ</p><ol id="certs" class="path"></ol><div id="cbox" class="card" aria-live="polite">เลือกใบรับรอง</div></section>
+
+<section id="arch" class="wrap"><h2>Architecture ตัวอย่าง: Web Application</h2><div id="arch-flow" class="path"></div><div id="abox" class="card" aria-live="polite">แตะ Node เพื่อดูคำอธิบาย</div></section>
+
+<section class="wrap"><h2>Why Azure?</h2><ul class="lead plain"><li>Azure คือ Cloud Platform ของ Microsoft</li><li>ให้บริการหลายโมเดล ทั้ง IaaS, PaaS และ FaaS</li><li>มี Global Infrastructure แบบ Region และ Availability Zone</li><li>มีรูปแบบราคาหลายแบบ และต้องจัดการค่าใช้จ่ายอย่างต่อเนื่อง</li><li>มีเส้นทางใบรับรองตามระดับและบทบาท</li></ul></section>
+
+<section id="refs" class="wrap"><h2>References</h2><ul class="refs">
+<li><a target="_blank" rel="noopener" href="https://azure.microsoft.com/">Microsoft Azure</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/azure/">Azure Documentation (Microsoft Learn)</a></li>
+<li><a target="_blank" rel="noopener" href="https://azure.microsoft.com/pricing/">Azure Pricing</a></li>
+<li><a target="_blank" rel="noopener" href="https://azure.microsoft.com/explore/global-infrastructure/">Azure Global Infrastructure</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/credentials/browse/">Microsoft Certifications</a></li>
+<li><a target="_blank" rel="noopener" href="https://news.microsoft.com/source/asia/2026/03/31/microsoft-deepens-thailand-partnership-with-more-than-us1-billion-investment-spanning-technology-trust-and-talent/">Microsoft Source Asia: Thailand (31 มี.ค. 2026)</a></li>
+<li><a target="_blank" rel="noopener" href="https://comparecloud.in">comparecloud.in (Supporting)</a></li>
+<li><a target="_blank" rel="noopener" href="https://devopsplatform.co.uk">devopsplatform.co.uk (Supporting)</a></li></ul></section>
+</main>
+<footer><div class="wrap"><strong>G2 : Azure Cloud</strong><p>67010918023 กานดา ราชคมน์ · 67010918097 อารดา งามดี · 67010918060 อธิชา ยะรี · 66010916006 อนัญญารัตน์ ตุปะโส · 67010918034 นารีรัตน์ จักทอน</p></div></footer>
+<div id="modal" role="dialog" aria-modal="true" hidden><div class="sheet"><button id="x" aria-label="ปิด">Close</button><div id="mc"></div></div></div>
+<button id="top" aria-label="กลับขึ้นด้านบน" hidden>Top</button>
+<script src="js/script.js"></script></body></html>
