@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="th" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Azure Cloud | G2 Cloud Computing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+<style>:root{--bg:#06122b;--bg2:#0b1d3f;--tx:#eaf2ff;--mu:#9db4d6;--ac:#0078d4;--cy:#50e6ff;--cd:rgba(255,255,255,.06);--bd:rgba(80,230,255,.2)}
+[data-theme=light]{--bg:#fff;--bg2:#eef5fc;--tx:#10233f;--mu:#4a5f7d;--cd:#fff;--bd:#c6dbf0}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--tx);font:clamp(16px,1.3vw,19px)/1.7 Inter,"Noto Sans Thai","Segoe UI",sans-serif;overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom)}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--ac),var(--cy));z-index:99}
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;padding:8px 20px;padding-top:calc(8px + env(safe-area-inset-top));background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.logo{font-weight:800;color:var(--cy);text-decoration:none;margin-right:auto}
+.nav nav{display:flex;gap:4px}.nav a,button{color:var(--tx)}
+.nav nav a{padding:10px 12px;border-radius:8px;text-decoration:none;font-size:.85em;min-height:44px;display:flex;align-items:center}
+.nav nav a:hover,.nav nav a.on{background:var(--cd);color:var(--cy)}
+button{font:inherit;min-height:44px;min-width:44px;padding:0 16px;border:1px solid var(--bd);background:var(--cd);border-radius:10px;cursor:pointer}
+#burger{display:none}:focus-visible{outline:3px solid var(--cy);outline-offset:2px}
+.wrap{max-width:1160px;margin:auto;padding:clamp(48px,7vw,96px) 20px}
+h1{font-size:clamp(3rem,9vw,7rem);line-height:1;margin:.2em 0;letter-spacing:-.03em}
+h2{font-size:clamp(1.9rem,4vw,3rem);margin:0 0 .4em;line-height:1.2}.h3{margin-top:2.5em}
+.hero{min-height:88vh;display:flex;align-items:center;position:relative;background:radial-gradient(ellipse at 70% 20%,#0a4a9e66,transparent 60%),var(--bg2);overflow:hidden}
+.hero .wrap{position:relative;z-index:2;width:100%}.tag{color:var(--cy);font-weight:600}
+.sub{font-size:clamp(1.2rem,2.6vw,1.9rem);color:var(--mu)}
+.btn{background:var(--ac);border:0;color:#fff;font-weight:600;padding:0 28px}
+.members{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:6px 20px;font-size:.88em;color:var(--mu)}
+.net{position:absolute;inset:0;width:100%;height:100%;opacity:.5}.ln path{fill:none;stroke:var(--cy);stroke-width:1.2;stroke-dasharray:6 8;animation:d 14s linear infinite}.nd circle{fill:var(--cy);animation:p 4s ease-in-out infinite}
+@keyframes d{to{stroke-dashoffset:-140}}@keyframes p{50%{opacity:.35}}
+.lead{max-width:70ch;color:var(--mu);font-size:1.08em}.plain{list-style:none;padding:0}
+.grid3{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
+.card{background:var(--cd);border:1px solid var(--bd);border-radius:14px;padding:22px;min-width:0}
+.card h3{margin:.2em 0}.card p{margin:.4em 0}
+button.card{text-align:left;width:100%;height:100%;display:block;transition:transform .4s,border-color .4s}
+button.card:hover{transform:translateY(-3px);border-color:var(--cy)}
+.cat{color:var(--cy);font-size:.8em;font-weight:600}.prod{font-weight:800}.k{color:var(--mu);font-size:.9em}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.tabs button[aria-selected=true]{background:var(--ac);color:#fff;border-color:var(--ac)}
+.map{background:var(--cd);border:1px solid var(--bd);border-radius:14px;margin:16px 0;overflow:hidden}.map svg{width:100%;display:block}
+.dot{fill:var(--cy)}.dot.plan{fill:none;stroke:var(--cy);stroke-width:.6;stroke-dasharray:1.5 1}.pinh{fill:transparent;cursor:pointer}.pinh:focus-visible{stroke:var(--cy);stroke-width:.6}
+.note{color:var(--mu);font-size:.9em;border-left:3px solid var(--ac);padding-left:12px;margin-top:16px}
+.flow,.path{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:24px 0}.flow li{padding:12px 20px;border:1px solid var(--bd);border-radius:999px;background:var(--cd)}.flow li:not(:last-child)::after{content:"\2192";margin-left:14px;color:var(--cy)}
+.path button[aria-pressed=true]{background:var(--ac);color:#fff}.path .lv{flex-basis:100%;color:var(--mu);font-size:.85em;margin-top:8px}
+ul{padding-left:1.2em}.refs{list-style:none;padding:0}.refs a{color:var(--cy);display:inline-block;padding:10px 0}
+footer{background:var(--bg2);border-top:1px solid var(--bd);color:var(--mu);font-size:.9em}footer .wrap{padding-block:40px}
+#modal{position:fixed;inset:0;background:#000a;z-index:90;display:grid;place-items:center;padding:16px}#modal[hidden]{display:none}
+.sheet{background:var(--bg2);border:1px solid var(--bd);border-radius:20px;max-width:680px;width:100%;max-height:88vh;overflow:auto;padding:12px 24px 24px;box-shadow:0 30px 80px #0008,0 0 40px #50e6ff22;transform:translateY(60px) scale(.82);opacity:0;transition:transform .6s cubic-bezier(.34,1.56,.64,1),opacity .3s ease;will-change:transform}
+@keyframes f{from{opacity:0;transform:translateY(12px)}}.sheet h4{color:var(--cy);margin:1em 0 0}.sheet p{margin:.2em 0}
+#top{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60}
+@media(max-width:1100px){#burger{display:block}.nav nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg2);padding:10px 20px}.nav nav.open{display:flex}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.credits{text-align:center;background:var(--bg2);border-top:1px solid var(--bd)}.credits h3{color:var(--cy);letter-spacing:.2em;margin:1.6em 0 .6em}.credits ol{list-style:none;padding:0;margin:0}.credits li{padding:4px 0}.teacher{font-weight:800;font-size:1.2em;margin:0}.credits .k{margin:.2em 0}
+.course{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:8px 18px;margin:0 0 4px;border:1px solid var(--bd);border-radius:999px;background:var(--cd);backdrop-filter:blur(8px);font-size:.95em}.course b{color:var(--cy);letter-spacing:.06em}.course i{font-style:normal;color:var(--mu);border-left:1px solid var(--bd);padding-left:14px}
+.coursebox{display:inline-flex;flex-direction:column;gap:2px;padding:16px 28px;border:1px solid var(--bd);border-radius:16px;background:var(--cd)}.coursebox b{color:var(--cy);font-size:1.3em;letter-spacing:.08em}.coursebox span{font-weight:600}.coursebox i{font-style:normal;color:var(--mu)}
+#modal{opacity:0;transition:opacity .35s ease,backdrop-filter .35s ease}#modal.show{opacity:1;backdrop-filter:blur(8px)}#modal.show .sheet{transform:none;opacity:1}
+#mc>*{opacity:0;transform:translateY(12px)}#modal.show #mc>*{opacity:1;transform:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*45ms + 180ms)}
+.grab{display:grid;place-items:center;height:28px;margin:0 -24px;cursor:grab;touch-action:none}.grab span{width:44px;height:5px;border-radius:9px;background:var(--bd)}
+button.card:active{transform:scale(.97)}#x{float:right;margin-top:6px;transition:transform .3s}#x:active{transform:scale(.92)}
+</style></head><body>
+<div id="bar" aria-hidden="true"></div>
+<header class="nav"><a class="logo" href="#home">Azure Cloud</a>
+<button id="burger" aria-label="เปิดเมนู" aria-expanded="false">Menu</button>
+<nav id="menu" aria-label="หลัก"><a href="#home">Home</a><a href="#azure">Azure</a><a href="#services">Services</a><a href="#infra">Infrastructure</a><a href="#pricing">Pricing</a><a href="#proscons">Pros &amp; Cons</a><a href="#cert">Certification</a><a href="#refs">References</a></nav>
+<button id="theme" aria-label="สลับธีม">Light</button></header>
+<main>
+<section id="home" class="hero"><svg class="net" viewBox="0 0 800 400" aria-hidden="true"><g class="ln"><path d="M50 300L220 180L400 240L580 120L760 200"/><path d="M220 180L300 60L580 120"/><path d="M400 240L480 340L700 320"/></g><g class="nd"><circle cx="50" cy="300" r="6"/><circle cx="220" cy="180" r="8"/><circle cx="400" cy="240" r="8"/><circle cx="580" cy="120" r="10"/><circle cx="760" cy="200" r="6"/><circle cx="300" cy="60" r="6"/><circle cx="480" cy="340" r="6"/><circle cx="700" cy="320" r="6"/></g></svg>
+<div class="wrap"><p class="tag">G2 : Azure Cloud</p><p class="course"><b>0904327</b><span>เทคโนโลยีการประมวลผลแบบคลาวด์</span><i>Sec 1 · 1/2569</i></p><h1>Azure Cloud</h1><p class="sub">The Cloud Platform for the Digital Era</p>
+<button class="btn" data-go="#azure">Explore Azure</button>
+<ul class="members"><li>67010918023 นางสาวกานดา ราชคมน์</li><li>67010918097 นางสาวอารดา งามดี</li><li>67010918060 นางสาวอธิชา ยะรี</li><li>66010916006 นางสาวอนัญญารัตน์ ตุปะโส</li><li>67010918034 นางสาวนารีรัตน์ จักทอน</li></ul></div></section>
+
+<section id="azure" class="wrap"><h2>Azure คืออะไร</h2>
+<p class="lead">Microsoft Azure คือแพลตฟอร์มคลาวด์ของ Microsoft ที่ให้เช่าทรัพยากรไอที เช่น เซิร์ฟเวอร์ ฐานข้อมูล เครือข่าย และ AI ผ่านอินเทอร์เน็ต แทนการซื้อและดูแลฮาร์ดแวร์เอง</p>
+<div class="grid3"><article class="card"><h3>Cloud Computing</h3><p>การใช้ทรัพยากรคอมพิวเตอร์ตามต้องการผ่านเครือข่าย จ่ายตามการใช้งาน</p></article><article class="card"><h3>บทบาทของ Azure</h3><p>เป็น Public Cloud ที่ให้บริการแบบ IaaS, PaaS และ Serverless รวมถึงเครื่องมือด้านข้อมูลและ AI</p></article><article class="card"><h3>ใครใช้ได้</h3><p>นักพัฒนา องค์กร หน่วยงานรัฐ และนักศึกษา ตั้งแต่เว็บแอปขนาดเล็กถึงระบบองค์กร</p></article></div></section>
+
+<section id="services" class="wrap"><h2>2.1 Azure Services</h2><p class="lead">แตะการ์ดเพื่อดูรายละเอียด แต่ละบริการระบุ Azure Product ที่ใช้เป็นตัวอย่าง</p><div id="cards" class="grid3"></div>
+<h3 class="h3">Service Comparison</h3><div id="tabs" role="tablist" class="tabs"></div><div id="cmp" class="card" aria-live="polite"></div></section>
+
+<section id="infra" class="wrap"><h2>2.2 Data Center Location</h2>
+<p class="lead">Region คือกลุ่ม Data Center ในพื้นที่หนึ่ง Availability Zone คือตำแหน่งแยกทางกายภาพภายใน Region เพื่อความทนทาน บาง Region มี Region Pair สำหรับ Disaster Recovery</p>
+<div class="map"><svg id="world" viewBox="0 0 360 180" role="img" aria-label="แผนที่ Azure Region"></svg></div><div id="pin" class="card" aria-live="polite">แตะหมุดบนแผนที่เพื่อดูข้อมูล Region</div>
+<p class="note">ตรวจสอบ ณ ปี 2026: Microsoft ประกาศแผนสร้าง Azure Region ในประเทศไทย (ลงทุนกว่า 1 พันล้านดอลลาร์สหรัฐ ช่วง 2026–2028) แต่ยังเป็นแผน ไม่ใช่ Region ที่เปิดให้บริการ</p></section>
+
+<section id="pricing" class="wrap"><h2>2.3 Pricing Model</h2><div id="ptabs" class="tabs"></div><div id="pbox" class="card" aria-live="polite"></div>
+<ol class="flow"><li>Usage</li><li>Resource</li><li>Billing</li><li>Cost Management</li></ol><p class="note">ไม่ระบุราคาโดยประมาณ ราคาจริงขึ้นกับ Region สกุลเงิน และ Resource ดูที่ Azure Pricing Calculator</p></section>
+
+<section id="proscons" class="wrap"><h2>2.4 Strengths &amp; Considerations</h2><div class="grid2"><div class="card"><h3>Strengths</h3><ul><li>โครงสร้างพื้นฐานระดับโลกที่มี Region จำนวนมาก</li><li>พอร์ตโฟลิโอบริการกว้าง ตั้งแต่ IaaS ถึง AI</li><li>เชื่อมต่อกับระบบองค์กร Microsoft และ Entra ID</li><li>มีเครื่องมือด้านความปลอดภัยและนักพัฒนา</li></ul></div><div class="card"><h3>Considerations</h3><ul><li>โครงสร้างราคาซับซ้อน ต้องวางแผนและติดตามค่าใช้จ่าย</li><li>มี Learning Curve จากจำนวนบริการ</li><li>ควรพิจารณาความเสี่ยง Vendor Lock-in</li><li>บริการบางรายการไม่มีในทุก Region</li></ul></div></div></section>
+
+<section id="cert" class="wrap"><h2>2.5 Certification Path</h2><p class="lead">แตะใบรับรองเพื่อดูรายละเอียด ตรวจสอบรายการล่าสุดที่ Microsoft Learn ก่อนลงสอบ</p><ol id="certs" class="path"></ol><div id="cbox" class="card" aria-live="polite">เลือกใบรับรอง</div></section>
+
+<section id="arch" class="wrap"><h2>Architecture ตัวอย่าง: Web Application</h2><div id="arch-flow" class="path"></div><div id="abox" class="card" aria-live="polite">แตะ Node เพื่อดูคำอธิบาย</div></section>
+
+<section class="wrap"><h2>Why Azure?</h2><ul class="lead plain"><li>Azure คือ Cloud Platform ของ Microsoft</li><li>ให้บริการหลายโมเดล ทั้ง IaaS, PaaS และ FaaS</li><li>มี Global Infrastructure แบบ Region และ Availability Zone</li><li>มีรูปแบบราคาหลายแบบ และต้องจัดการค่าใช้จ่ายอย่างต่อเนื่อง</li><li>มีเส้นทางใบรับรองตามระดับและบทบาท</li></ul></section>
+
+<section id="refs" class="wrap"><h2>References</h2><ul class="refs">
+<li><a target="_blank" rel="noopener" href="https://azure.microsoft.com/">Microsoft Azure</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/azure/">Azure Documentation (Microsoft Learn)</a></li>
+<li><a target="_blank" rel="noopener" href="https://azure.microsoft.com/pricing/">Azure Pricing</a></li>
+<li><a target="_blank" rel="noopener" href="https://azure.microsoft.com/explore/global-infrastructure/">Azure Global Infrastructure</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/credentials/browse/">Microsoft Certifications</a></li>
+<li><a target="_blank" rel="noopener" href="https://news.microsoft.com/source/asia/2026/03/31/microsoft-deepens-thailand-partnership-with-more-than-us1-billion-investment-spanning-technology-trust-and-talent/">Microsoft Source Asia: Thailand (31 มี.ค. 2026)</a></li>
+<li><a target="_blank" rel="noopener" href="https://comparecloud.in">comparecloud.in (Supporting)</a></li>
+<li><a target="_blank" rel="noopener" href="https://devopsplatform.co.uk">devopsplatform.co.uk (Supporting)</a></li></ul></section>
+</main>
+<section id="credits" class="credits"><div class="wrap"><h2>Azure Cloud</h2>
+<h3>รายวิชา</h3><div class="coursebox"><b>0904327</b><span>เทคโนโลยีการประมวลผลแบบคลาวด์</span><i>Sec 1 · 1/2569</i></div><h3>คณะผู้จัดทำ</h3><ol><li>67010918023 นางสาวกานดา ราชคมน์</li><li>67010918097 นางสาวอารดา งามดี</li><li>67010918060 นางสาวอธิชา ยะรี</li><li>66010916006 นางสาวอนัญญารัตน์ ตุปะโส</li><li>67010918034 นางสาวนารีรัตน์ จักทอน</li></ol>
+<h3>เสนอ</h3><p class="teacher">อาจารย์อิทธิพล เอี่ยมภูงา</p><p class="k">อาจารย์ผู้สอนประจำวิชา</p></div></section>
+<footer><div class="wrap"><strong>G2 : Azure Cloud</strong><p>67010918023 กานดา ราชคมน์ · 67010918097 อารดา งามดี · 67010918060 อธิชา ยะรี · 66010916006 อนัญญารัตน์ ตุปะโส · 67010918034 นารีรัตน์ จักทอน</p></div></footer>
+<div id="modal" role="dialog" aria-modal="true" hidden><div class="sheet"><div class="grab" aria-hidden="true"><span></span></div><button id="x" aria-label="ปิด">Close</button><div id="mc"></div></div></div>
+<button id="top" aria-label="กลับขึ้นด้านบน" hidden>Top</button>
+<script>const $=s=>document.querySelector(s),H=document.documentElement;
+const S=[
+["IaaS","Azure Virtual Machines","เช่าเครื่องเสมือน ควบคุมระบบปฏิบัติการเอง","ย้ายระบบเดิมขึ้นคลาวด์","ควบคุมสูง","Infrastructure as a Service ให้ทรัพยากรพื้นฐาน (คำนวณ เครือข่าย ดิสก์)","ผู้ใช้เลือกขนาด VM และระบบปฏิบัติการ ดูแลการติดตั้งและอัปเดตเอง Azure ดูแลฮาร์ดแวร์","Users → Load Balancer → VM → Managed Disk"],
+["CaaS","Azure Kubernetes Service (AKS)","บริการ Kubernetes แบบจัดการ","แอปแบบ Microservices","จัดการ Container ได้ง่าย","Container คือแพ็กเกจแอปพร้อมส่วนที่ต้องใช้ Kubernetes คือระบบจัดการ Container จำนวนมาก","AKS จัดการ Control Plane ให้ ผู้ใช้กำหนด Node และ Workload","Registry → AKS Cluster → Pods → Ingress"],
+["PaaS","Azure App Service","โฮสต์เว็บแอปและ API โดยไม่ดูแลเซิร์ฟเวอร์","เว็บแอปและ REST API","ลดภาระ Infrastructure","Platform as a Service ให้แพลตฟอร์มพร้อมรันโค้ด","นักพัฒนา Deploy โค้ด Azure ดูแล OS, Patch และการขยายระบบ","Developer → App Service → Database"],
+["FaaS","Azure Functions","รันโค้ดเมื่อมี Event โดยไม่จัดการเซิร์ฟเวอร์","ประมวลผลไฟล์หรือข้อความเมื่อมีเหตุการณ์","จ่ายตามการทำงานจริง","Serverless แบบ Function ทำงานเมื่อมี Trigger เช่น HTTP, Timer, Queue","Event ทำให้ Function ทำงานและขยายตามปริมาณ Event (Event-driven)","Event → Function → Storage / Database"],
+["DaaS","Azure SQL Database","ฐานข้อมูล SQL แบบจัดการ","ฐานข้อมูลของแอปพลิเคชัน","Backup และ Scaling จัดการให้","Database as a Service ที่ Azure ดูแลการติดตั้งและบำรุงรักษา","Azure จัดการ Backup, ความพร้อมใช้งาน และ Security ส่วนผู้ใช้ออกแบบข้อมูล","App → Azure SQL Database → Backup"],
+["Security & Identity","Microsoft Entra ID","บริการ Identity และการเข้าถึง","Single Sign-on และ MFA","ควบคุมสิทธิ์รวมศูนย์","จัดการ Identity, Authentication, Authorization, MFA และ Access Control","ผู้ใช้ยืนยันตัวตนกับ Entra ID แล้วได้สิทธิ์ตามนโยบาย ใช้ร่วมกับ Microsoft Defender for Cloud ตรวจสอบความปลอดภัย","User → Entra ID → Policy → Application"],
+["IoT","Azure IoT Hub","เชื่อมต่อและจัดการอุปกรณ์ IoT","เซนเซอร์ในโรงงาน","รับข้อมูลอุปกรณ์จำนวนมาก","Device → Internet → Azure → Data → Analytics/AI","อุปกรณ์ส่งข้อมูลเข้า IoT Hub แล้วส่งต่อไปวิเคราะห์ Azure IoT Operations เป็นบริการสำหรับ Edge (ควรตรวจสถานะล่าสุดบน Microsoft Learn)","Device → IoT Hub → Analytics/AI"],
+["STaaS","Azure Blob Storage","Object Storage สำหรับข้อมูลไม่มีโครงสร้าง","เก็บรูป วิดีโอ และ Backup","ขยายได้มาก","Object Storage เก็บไฟล์และข้อมูลจำนวนมากเป็น Object","แอปเข้าถึงข้อมูลผ่าน API/HTTPS","App → Storage Account → Blob Container"],
+["Big Data & Analytics","Microsoft Fabric / Azure Synapse Analytics","วิเคราะห์ข้อมูลขนาดใหญ่","Dashboard ธุรกิจ","ตัดสินใจจากข้อมูล","Data → Processing → Analytics → Visualization → Business Decision","Fabric เป็นแพลตฟอร์มข้อมูลแบบรวม ส่วน Synapse เป็นบริการเดิม ควรตรวจหมวดและแนวทางปัจจุบันบน Microsoft Learn","Data Source → Fabric → Power BI"],
+["BCaaS","Azure Blockchain Service (ยุติแล้ว)","ไม่มีบริการแบบ Standalone ในปัจจุบัน","ไม่มี","ไม่ระบุ","Azure does not currently provide the former Azure Blockchain Service as an active standalone offering. บริการเดิมถูกยุติ (ผู้จัดทำทราบว่าเลิกในปี 2021 ควรยืนยันกับเอกสาร Microsoft)","ไม่ระบุสถาปัตยกรรม เพื่อไม่อ้างบริการที่ไม่มีอยู่","ไม่มี"],
+["LBaaS","Azure Load Balancer","กระจายทราฟฟิกไปหลายเซิร์ฟเวอร์","เว็บที่มีผู้ใช้จำนวนมาก","High Availability","Load Balancing กระจายคำขอเพื่อ Availability และ Scalability","Internet → Load Balancer → Server 1 / 2 / 3","Internet → Load Balancer → Server 1, 2, 3"]];
+$("#cards").innerHTML=S.map((s,i)=>`<button class="card" data-i="${i}"><span class="cat">${s[0]}</span><p class="prod">${s[1]}</p><p>${s[2]}</p><p class="k">Use case: ${s[3]}<br>Key benefit: ${s[4]}</p></button>`).join("");
+const modal=$("#modal");let last;
+$("#cards").onclick=e=>{const b=e.target.closest("[data-i]");if(!b)return;last=b;const s=S[b.dataset.i];
+$("#mc").innerHTML=`<h3>${s[0]}: ${s[1]}</h3><h4>What is it?</h4><p>${s[5]}</p><h4>How it works</h4><p>${s[6]}</p><h4>Use case</h4><p>${s[3]}</p><h4>Key benefit</h4><p>${s[4]}</p><h4>Example architecture</h4><p>${s[7]}</p>`;openM()};
+function openM(){const s=$(".sheet");s.style.transform="";[...$("#mc").children].forEach((e,i)=>e.style.setProperty("--i",i));modal.hidden=false;modal.offsetHeight;modal.classList.add("show");document.body.style.overflow="hidden";setTimeout(()=>$("#x").focus(),200)}
+const close=()=>{modal.classList.remove("show");document.body.style.overflow="";$(".sheet").style.transform="";setTimeout(()=>{modal.hidden=true;last&&last.focus()},400)};
+(()=>{const g=$(".grab"),s=$(".sheet");let y0=0,dy=0,on=0;
+g.onpointerdown=e=>{on=1;y0=e.clientY;dy=0;g.setPointerCapture(e.pointerId);s.style.transition="none"};
+g.onpointermove=e=>{if(!on)return;dy=Math.max(0,e.clientY-y0);s.style.transform=`translateY(${dy}px) scale(${1-dy/2000})`;modal.style.opacity=1-dy/500};
+g.onpointerup=g.onpointercancel=()=>{if(!on)return;on=0;s.style.transition="";modal.style.opacity="";if(dy>110)close();else s.style.transform=""}})();$("#x").onclick=close;modal.onclick=e=>e.target===modal&&close();
+addEventListener("keydown",e=>e.key==="Escape"&&!modal.hidden&&close());
+function tabs(id,box,data,fn){const t=$(id);t.innerHTML=Object.keys(data).map((k,i)=>`<button role="tab" aria-selected="${!i}">${k}</button>`).join("");
+const show=k=>{[...t.children].forEach(b=>b.setAttribute("aria-selected",b.textContent===k));$(box).innerHTML=fn(k,data[k])};
+t.onclick=e=>e.target.matches("button")&&show(e.target.textContent);show(Object.keys(data)[0])}
+const C={IaaS:["สูง (ผู้ใช้ดูแล OS)","ผู้ใช้ดูแล OS และแอป","ปรับขนาด VM หรือจำนวน VM","ย้ายระบบเดิม","ผู้ดูแลระบบ"],CaaS:["ปานกลาง","ผู้ใช้ดูแล Workload Azure ดูแล Control Plane","ปรับจำนวน Pod/Node","Microservices","DevOps"],PaaS:["ปานกลางถึงต่ำ","Azure ดูแลแพลตฟอร์ม","ปรับตามแผนบริการ","เว็บแอป/API","นักพัฒนา"],FaaS:["ต่ำ","Azure ดูแลเกือบทั้งหมด","ขยายตาม Event","งานแบบ Event-driven","นักพัฒนา"],DaaS:["ปานกลางถึงต่ำ","Azure ดูแล Backup/Patch","ปรับขนาดตามระดับบริการ","ฐานข้อมูลแอป","นักพัฒนา/DBA"],STaaS:["ต่ำ","Azure ดูแลระบบจัดเก็บ","ขยายได้มาก","ไฟล์/Backup","ทุกกลุ่ม"]};
+const L=["Control","Management","Scalability","Use Case","Target User"];
+tabs("#tabs","#cmp",C,(k,v)=>`<h3>${k}</h3>`+L.map((l,i)=>`<p><b>${l}:</b> ${v[i]}</p>`).join("")+`<p class="k">เนื้อหาเชิงเปรียบเทียบแบบสรุปสำหรับการศึกษา</p>`);
+const P={"Pay-as-you-go":"จ่ายตามการใช้งานจริง ไม่มีข้อผูกมัดระยะยาว","Reservations":"จอง Resource ล่วงหน้าเพื่อรับส่วนลดตามเงื่อนไข","Savings Plans":"ผูกพันค่าใช้จ่ายต่อชั่วโมงเพื่อรับส่วนลดตามเงื่อนไข","Free Account":"Microsoft มี Free Account และบริการฟรีบางรายการ เงื่อนไขเปลี่ยนได้ ตรวจสอบที่ azure.microsoft.com/free","Cost Management":"ใช้ Microsoft Cost Management ดู วิเคราะห์ และตั้งงบประมาณค่าใช้จ่าย"};
+tabs("#ptabs","#pbox",P,(k,v)=>`<h3>${k}</h3><p>${v}</p>`);
+const R=[["Southeast Asia","สิงคโปร์",103.8,1.35,"Region ใกล้ไทยที่สุดแห่งหนึ่ง"],["East Asia","ฮ่องกง",114.2,22.3,"Region ในเอเชียตะวันออก"],["Japan East","ญี่ปุ่น",139.7,35.7,"Region ในญี่ปุ่น"],["Indonesia Central","อินโดนีเซีย",106.8,-6.2,"เปิดเมื่อ พ.ค. 2025 มี 3 Availability Zone (Microsoft)"],["Malaysia West","มาเลเซีย",101.7,3.1,"เปิดเมื่อ พ.ค. 2025 มี 3 Availability Zone (Microsoft)"],["Central India","อินเดีย",73.9,18.5,"Region ในอินเดีย"],["Australia East","ออสเตรเลีย",151.2,-33.9,"Region ในออสเตรเลีย"],["West Europe","เนเธอร์แลนด์",4.9,52.4,"Region ในยุโรป"],["East US","สหรัฐฯ",-78.4,37.4,"Region ในอเมริกาเหนือ"],["Brazil South","บราซิล",-46.6,-23.5,"Region ในอเมริกาใต้"],["South Africa North","แอฟริกาใต้",28.2,-26.2,"Region ในแอฟริกา"],["Thailand (planned)","ไทย",100.5,13.75,"ประกาศแผนสร้าง ยังไม่เปิดให้บริการ ณ ปี 2026"]];
+$("#world").innerHTML='<rect width="360" height="180" fill="none"/>'+Array.from({length:17},(_,i)=>`<line x1="${i*22.5}" y1="0" x2="${i*22.5}" y2="180" stroke="currentColor" opacity=".08"/>`).join("")+R.map((r,i)=>{const x=r[2]+180,y=90-r[3];return`<circle class="dot${i==11?" plan":""}" cx="${x}" cy="${y}" r="2.2"/><circle class="pinh" tabindex="0" role="button" aria-label="${r[0]}" data-i="${i}" cx="${x}" cy="${y}" r="7"/>`}).join("");
+const pin=e=>{const c=e.target.closest("[data-i]");if(!c||!c.classList.contains("pinh"))return;const r=R[c.dataset.i];$("#pin").innerHTML=`<h3>${r[0]}</h3><p>${r[1]}</p><p>${r[4]}</p>`};
+$("#world").onclick=pin;$("#world").onkeydown=e=>(e.key==="Enter"||e.key===" ")&&(e.preventDefault(),pin(e));
+const CE=[["Azure Fundamentals","AZ-900","Fundamentals","พื้นฐานคลาวด์และ Azure"],["Azure AI Fundamentals","AI-900","Fundamentals","พื้นฐาน AI"],["Azure Data Fundamentals","DP-900","Fundamentals","พื้นฐานข้อมูล"],["Security, Compliance, and Identity Fundamentals","SC-900","Fundamentals","พื้นฐานความปลอดภัย"],["Azure Administrator","AZ-104","Associate","ผู้ดูแลระบบ Azure"],["Azure Developer","AZ-204","Associate","นักพัฒนา Azure"],["Azure Solutions Architect Expert","AZ-305","Expert","ออกแบบโซลูชัน"],["DevOps Engineer Expert","AZ-400","Expert","DevOps"]];
+$("#certs").innerHTML=CE.map((c,i)=>`<li><button aria-pressed="false" data-i="${i}">${c[1]} · ${c[2]}</button></li>`).join("");
+$("#certs").onclick=e=>{const b=e.target.closest("button");if(!b)return;document.querySelectorAll("#certs button").forEach(x=>x.setAttribute("aria-pressed",x===b));const c=CE[b.dataset.i];$("#cbox").innerHTML=`<h3>${c[0]}</h3><p>Exam code: ${c[1]} · Level: ${c[2]}</p><p>Target skill: ${c[3]}</p><p class="k">ตรวจสอบสถานะข้อสอบล่าสุดที่ Microsoft Learn</p>`};
+const A=[["User","ผู้ใช้เข้าถึงเว็บผ่านอินเทอร์เน็ต"],["Azure Front Door","จุดเข้าถึงระดับโลกสำหรับเว็บแอป กระจายทราฟฟิก"],["Azure App Service","รันแอปพลิเคชัน"],["Azure SQL Database","ฐานข้อมูลของแอป"],["Azure Blob Storage","เก็บไฟล์และสื่อ"],["Microsoft Fabric","วิเคราะห์ข้อมูล"]];
+$("#arch-flow").innerHTML=A.map((a,i)=>`<button data-i="${i}">${a[0]}</button>`).join('<span aria-hidden="true">→</span>');
+$("#arch-flow").onclick=e=>{const b=e.target.closest("button");b&&($("#abox").innerHTML=`<h3>${A[b.dataset.i][0]}</h3><p>${A[b.dataset.i][1]}</p>`)};
+const go=h=>$(h).scrollIntoView({behavior:"smooth"}),menu=$("#menu"),bg=$("#burger");
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
+menu.onclick=e=>{if(e.target.matches("a")){menu.classList.remove("open");bg.setAttribute("aria-expanded",false)}};
+bg.onclick=()=>bg.setAttribute("aria-expanded",menu.classList.toggle("open"));
+const th=$("#theme"),set=t=>{H.dataset.theme=t;th.textContent=t=="dark"?"Light":"Dark";try{localStorage.setItem("theme",t)}catch(e){}};
+try{set(localStorage.getItem("theme")||"dark")}catch(e){}
+th.onclick=()=>set(H.dataset.theme=="dark"?"light":"dark");
+$("#top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+const links=[...menu.children];
+addEventListener("scroll",()=>{const y=scrollY,m=H.scrollHeight-innerHeight;$("#bar").style.width=(m>0?y/m*100:0)+"%";$("#top").hidden=y<500;
+let cur=links[0];links.forEach(a=>{const s=$(a.getAttribute("href"));s&&s.getBoundingClientRect().top<120&&(cur=a)});links.forEach(a=>a.classList.toggle("on",a===cur))},{passive:true});
+</script></body></html>
